@@ -216,7 +216,7 @@ function HeroSection() {
           >
             <div className="relative z-10 flex items-center justify-center h-full">
               {/* Code editor window */}
-              <div className="w-full max-w-lg bg-gray-800/80 backdrop-blur-sm rounded-xl overflow-hidden shadow-2xl border border-gray-700">
+              <div className="w-full max-w-lg bg-gray-800/80 backdrop-blur-sm rounded-xl overflow-hidden shadow-2xl border border-gray-700 mx-2 sm:mx-0">
                 {/* Editor header with controls */}
                 <div className="bg-gray-900/80 px-4 py-2 flex items-center border-b border-gray-700">
                   <div className="flex space-x-2">
@@ -280,7 +280,7 @@ function HeroSection() {
 
               {/* Floating technology badges */}
               <motion.div
-                className="absolute top-4 md:top-10 -left-3 md:-left-6 bg-gray-800/90 backdrop-blur-sm px-2 md:px-4 py-1 md:py-2 rounded-lg border border-gray-700 shadow-lg"
+                className="absolute top-10 -left-6 bg-gray-800/90 backdrop-blur-sm px-4 py-2 rounded-lg border border-gray-700 shadow-lg hidden sm:block"
                 animate={{
                   y: [0, -10, 0],
                 }}
@@ -290,14 +290,14 @@ function HeroSection() {
                   ease: "easeInOut"
                 }}
               >
-                <div className="flex items-center gap-1 md:gap-2">
-                  <div className="w-2 md:w-3 h-2 md:h-3 bg-blue-500 rounded-full animate-pulse"></div>
-                  <span className="text-white font-medium text-xs md:text-sm">React.js</span>
+                <div className="flex items-center gap-2">
+                  <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse"></div>
+                  <span className="text-white font-medium">React.js</span>
                 </div>
               </motion.div>
 
               <motion.div
-                className="absolute bottom-10 md:bottom-20 -right-3 md:-right-6 bg-gray-800/90 backdrop-blur-sm px-2 md:px-4 py-1 md:py-2 rounded-lg border border-gray-700 shadow-lg"
+                className="absolute bottom-20 -right-6 bg-gray-800/90 backdrop-blur-sm px-4 py-2 rounded-lg border border-gray-700 shadow-lg hidden sm:block"
                 animate={{
                   y: [0, 10, 0],
                 }}
@@ -308,9 +308,9 @@ function HeroSection() {
                   delay: 1
                 }}
               >
-                <div className="flex items-center gap-1 md:gap-2">
-                  <div className="w-2 md:w-3 h-2 md:h-3 bg-green-500 rounded-full animate-pulse"></div>
-                  <span className="text-white font-medium text-xs md:text-sm">Tailwind CSS</span>
+                <div className="flex items-center gap-2">
+                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                  <span className="text-white font-medium">Tailwind CSS</span>
                 </div>
               </motion.div>
             </div>
