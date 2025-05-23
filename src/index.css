@@ -1,13 +1,212 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Özel animasyonlar */
+
+/* Scroll animations for projects section */
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@keyframes slideDown {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
 }
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+.animate-slide-down {
+  animation: slideDown 0.8s ease-out forwards;
+}
+@keyframes marquee-fast {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-fast {
+  animation: marquee-fast 15s linear infinite;
+  display: flex;
+  width: max-content;
+}
+
+/* Menü açılma animasyonu */
+@keyframes slideDown {
+  0% {
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    max-height: 400px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slideDown {
+  animation: slideDown 0.3s ease-out forwards;
+}
+
+/* Marquee Animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.marquee-container {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.marquee-content {
+  display: flex;
+  animation: marquee 20s linear infinite;
+  min-width: 100%;
+}
+
+/* Beceriler marquee animasyonu - Yeni versiyon */
+@keyframes skills-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50%));
+  }
+}
+
+.skills-marquee {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.skills-track {
+  position: relative;
+  display: inline-flex;
+  white-space: nowrap;
+  will-change: transform;
+  animation: skills-scroll 25s linear infinite;
+}
+
+.skills-item {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+/* Custom Cursor Styles */
+.cursor-dot, .cursor-ring {
+  pointer-events: none;
+  z-index: 9999;
+  position: fixed;
+  border-radius: 50%;
+  mix-blend-mode: exclusion;
+}
+
+.cursor-dot {
+  width: 32px;
+  height: 32px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(1px);
+}
+
+.cursor-ring {
+  width: 6px;
+  height: 6px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Hide default cursor when our custom one is active */
+body.custom-cursor-active {
+  cursor: none !important;
+}
+
+body.custom-cursor-active * {
+  cursor: none !important;
+}
+
+/* Scroll-triggered animation class */
+.scroll-animation {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-animation.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Özel scroll davranışı */
+html {
+  scroll-padding-top: 70px; /* Fixed header için ayarlama */
+  scroll-behavior: smooth; /* Smooth scroll davranışı */
+}
+
+body {
+  overflow-y: auto;
+  overflow-x: hidden;
+  /* Scroll hızını artırmak için webkit tarayıcılar için */
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #111827; /* bg-gray-900 */
+}
+
+/* Sticky sidebar için özel stiller */
+.sticky-sidebar {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 100px !important;
+  height: auto !important;
+  align-self: flex-start !important;
+  z-index: 50 !important;
+}
+
+/* Sticky sorunlarını çözmek için */
+.skills-section-container {
+  overflow: visible !important;
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.7);
+}
+
+/* Diğer stil özellikleri */

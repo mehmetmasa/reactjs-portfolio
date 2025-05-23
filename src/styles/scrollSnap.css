@@ -1,0 +1,27 @@
+/* Smooth Scroll Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Animasyon Stilleri */
+.project-card-enter {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.project-card-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 500ms, transform 500ms;
+}
+
+.project-card-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-card-exit-active {
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: opacity 500ms, transform 500ms;
+}
