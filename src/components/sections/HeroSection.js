@@ -122,7 +122,7 @@ function HeroSection() {
         className="absolute bottom-20 right-1/4 w-72 h-72 bg-indigo-600 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse animation-delay-2000"
       ></motion.div>
 
-      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 py-8 lg:py-16 relative z-10">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 py-8 lg:py-16 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
           {/* Left section: Hero content with staggered animations */}
           <motion.div
