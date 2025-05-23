@@ -75,14 +75,14 @@ function ProjectsSection() {
   };
 
   return (
-    <section className="bg-gray-900 py-12 lg:py-20" id="projects">
+    <section className="bg-gray-900 py-20" id="projects">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="pt-12 max-w-3xl mx-auto text-center">
           <SectionHeader
             subtitle="PROJELERİM"
             title="Son Çalışmalarım"
-            description="Son geliştirdiğim projelerden bazıları. İncelemek için projelere tıklayabilirsiniz."
+            description="Modern teknolojiler kullanarak geliştirdiğim projelerden bazıları. Detaylı bilgi için projelere tıklayabilirsiniz."
             centered={true}
           />
         </div>

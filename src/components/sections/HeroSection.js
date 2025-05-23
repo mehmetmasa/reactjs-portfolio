@@ -97,7 +97,7 @@ function HeroSection() {
   };
 
   return (
-    <section id="home" className="py-32 pb-0 overflow-hidden relative bg-gray-900 h-screen">
+    <section id="home" className="py-16 sm:py-24 md:py-32 pb-0 overflow-hidden relative bg-gray-900 min-h-screen">
       {/* Background gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-950 via-gray-900 to-black opacity-90 z-0"></div>
 
@@ -122,7 +122,7 @@ function HeroSection() {
         className="absolute bottom-20 right-1/4 w-72 h-72 bg-indigo-600 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse animation-delay-2000"
       ></motion.div>
 
-      <div className="max-w-7xl mx-auto px-6 py-8 lg:py-16 relative z-10">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 py-8 lg:py-16 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
           {/* Left section: Hero content with staggered animations */}
           <motion.div
@@ -216,7 +216,7 @@ function HeroSection() {
           >
             <div className="relative z-10 flex items-center justify-center h-full">
               {/* Code editor window */}
-              <div className="w-full max-w-lg bg-gray-800/80 backdrop-blur-sm rounded-xl overflow-hidden shadow-2xl border border-gray-700 mx-2 sm:mx-0">
+              <div className="w-full max-w-lg bg-gray-800/80 backdrop-blur-sm rounded-xl overflow-hidden shadow-2xl border border-gray-700 mx-auto px-1 sm:px-0 max-h-[400px] sm:max-h-[450px] md:max-h-[500px]">
                 {/* Editor header with controls */}
                 <div className="bg-gray-900/80 px-4 py-2 flex items-center border-b border-gray-700">
                   <div className="flex space-x-2">
@@ -227,48 +227,48 @@ function HeroSection() {
                 </div>
 
                 {/* Code editor content */}
-                <div className="p-3 md:p-4 font-mono text-xs md:text-sm overflow-x-auto">
-                  <div className="min-w-max">
+                <div className="p-2 sm:p-3 md:p-4 font-mono text-[10px] xs:text-xs md:text-sm overflow-x-auto leading-tight sm:leading-normal max-h-[300px] sm:max-h-[400px] overflow-y-auto">
+                  <div className="w-full">
                     <div className="mt-2">
                       <span className="text-purple-400">const</span> <span className="text-blue-400">developer</span> <span className="text-white">=</span> <span className="text-yellow-300">{`{`}</span>
                     </div>
-                    <div className="ml-2 md:ml-4">
+                    <div className="ml-1 sm:ml-2 md:ml-4">
                       <span className="text-green-400">name</span><span className="text-white">:</span> <span className="text-orange-300">'Mehmet Maşa'</span><span className="text-white">,</span>
                     </div>
-                    <div className="ml-2 md:ml-4">
+                    <div className="ml-1 sm:ml-2 md:ml-4">
                       <span className="text-green-400">title</span><span className="text-white">:</span> <span className="text-orange-300">'Full Stack Web Developer'</span><span className="text-white">,</span>
                     </div>
-                    <div className="ml-2 md:ml-4">
+                    <div className="ml-1 sm:ml-2 md:ml-4">
                       <span className="text-green-400">skills</span><span className="text-white">:</span> <span className="text-yellow-300">[</span>
                     </div>
-                    <div className="ml-4 md:ml-8">
+                    <div className="ml-2 sm:ml-4 md:ml-8">
                       <span className="text-orange-300">'PHP'</span><span className="text-white">,</span>
                     </div>
-                    <div className="ml-4 md:ml-8">
+                    <div className="ml-2 sm:ml-4 md:ml-8">
                       <span className="text-orange-300">'NodeJS'</span><span className="text-white">,</span>
                     </div>
-                    <div className="ml-4 md:ml-8">
+                    <div className="ml-2 sm:ml-4 md:ml-8">
                       <span className="text-orange-300">'ReactJS'</span><span className="text-white">,</span>
                     </div>
-                    <div className="ml-4 md:ml-8">
+                    <div className="ml-2 sm:ml-4 md:ml-8">
                       <span className="text-orange-300">'SQL'</span><span className="text-white">,</span>
                     </div>
-                    <div className="ml-4 md:ml-8">
+                    <div className="ml-2 sm:ml-4 md:ml-8">
                       <span className="text-orange-300">'Tailwind CSS'</span>
                     </div>
-                    <div className="ml-2 md:ml-4">
+                    <div className="ml-1 sm:ml-2 md:ml-4">
                       <span className="text-yellow-300">]</span><span className="text-white">,</span>
                     </div>
-                    <div className="ml-2 md:ml-4">
+                    <div className="ml-1 sm:ml-2 md:ml-4">
                       <span className="text-green-400">contact</span><span className="text-white">:</span> <span className="text-orange-300">'mehmetmasa@icloud.com'</span>
                     </div>
                     <div>
                       <span className="text-yellow-300">{`}`}</span><span className="text-white">;</span>
                     </div>
                     <div className="mt-4">
-                      <span className="text-purple-400">function</span> <span className="text-blue-400">createAmazingWebsites</span><span className="text-white">() {`{`}</span>
+                      <span className="text-purple-400">function</span> <span className="text-blue-400">createWebsites</span><span className="text-white">() {`{`}</span>
                     </div>
-                    <div className="ml-2 md:ml-4">
+                    <div className="ml-1 sm:ml-2 md:ml-4">
                       <span className="text-purple-400">return</span> <span className="text-blue-400">developer</span><span className="text-white">.</span><span className="text-blue-400">skills</span><span className="text-white">.</span><span className="text-yellow-300">map</span><span className="text-white">{`(skill => magic(skill));`}</span>
                     </div>
                     <div>
