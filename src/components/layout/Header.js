@@ -32,7 +32,7 @@ function Header() {
 
   return (
     <header className={`fixed w-full z-30 transition-all duration-300 ${headerClass}`}>
-      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-3 flex justify-between items-center">
         {/* Logo */}
         <a href="#home" className="flex items-center">
           <span className={`text-xl font-bold transition-colors ${isScrolled ? 'text-blue-400' : 'text-white'}`}>
