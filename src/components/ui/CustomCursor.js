@@ -4,9 +4,31 @@ import { motion } from 'framer-motion';
 const CustomCursor = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // Add custom cursor styles to body
+    // Mobile detection function
+    const checkMobile = () => {
+      const mobile = window.innerWidth <= 768 || 
+                   /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      setIsMobile(mobile);
+    };
+
+    // Initial check
+    checkMobile();
+
+    // Listen for resize events
+    window.addEventListener('resize', checkMobile);
+
+    // Don't apply custom cursor on mobile
+    if (isMobile) {
+      document.body.style.cursor = 'auto';
+      return () => {
+        window.removeEventListener('resize', checkMobile);
+      };
+    }
+
+    // Add custom cursor styles to body only on desktop
     document.body.style.cursor = 'none';
     
     const handleMouseMove = (e) => {
@@ -34,10 +56,16 @@ const CustomCursor = () => {
     return () => {
       // Clean up
       document.body.style.cursor = 'auto';
+      window.removeEventListener('resize', checkMobile);
       window.removeEventListener('mousemove', handleMouseMove);
       document.removeEventListener('mouseover', handleMouseOver);
     };
-  }, []);
+  }, [isMobile]);
+
+  // Don't render on mobile
+  if (isMobile) {
+    return null;
+  }
 
   const variants = {
     default: {

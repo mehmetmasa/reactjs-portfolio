@@ -227,58 +227,60 @@ function HeroSection() {
                 </div>
 
                 {/* Code editor content */}
-                <div className="p-4 font-mono text-sm">
-                  <div className="mt-2">
-                    <span className="text-purple-400">const</span> <span className="text-blue-400">developer</span> <span className="text-white">=</span> <span className="text-yellow-300">{`{`}</span>
-                  </div>
-                  <div className="ml-4">
-                    <span className="text-green-400">name</span><span className="text-white">:</span> <span className="text-orange-300">'Mehmet Maşa'</span><span className="text-white">,</span>
-                  </div>
-                  <div className="ml-4">
-                    <span className="text-green-400">title</span><span className="text-white">:</span> <span className="text-orange-300">'Full Stack Web Developer'</span><span className="text-white">,</span>
-                  </div>
-                  <div className="ml-4">
-                    <span className="text-green-400">skills</span><span className="text-white">:</span> <span className="text-yellow-300">[</span>
-                  </div>
-                  <div className="ml-8">
-                    <span className="text-orange-300">'PHP'</span><span className="text-white">,</span>
-                  </div>
-                  <div className="ml-8">
-                    <span className="text-orange-300">'NodeJS '</span><span className="text-white">,</span>
-                  </div>
-                  <div className="ml-8">
-                    <span className="text-orange-300">'ReactJS'</span><span className="text-white">,</span>
-                  </div>
-                  <div className="ml-8">
-                    <span className="text-orange-300">'SQL'</span><span className="text-white">,</span>
-                  </div>
-                  <div className="ml-8">
-                    <span className="text-orange-300">'Tailwind CSS'</span>
-                  </div>
-                  <div className="ml-4">
-                    <span className="text-yellow-300">]</span><span className="text-white">,</span>
-                  </div>
-                  <div className="ml-4">
-                    <span className="text-green-400">contact</span><span className="text-white">:</span> <span className="text-orange-300">'mehmetmasa@icloud.com'</span>
-                  </div>
-                  <div>
-                    <span className="text-yellow-300">{`}`}</span><span className="text-white">;</span>
-                  </div>
-                  <div className="mt-4">
-                    <span className="text-purple-400">function</span> <span className="text-blue-400">createAmazingWebsites</span><span className="text-white">() {`{`}</span>
-                  </div>
-                  <div className="ml-4">
-                    <span className="text-purple-400">return</span> <span className="text-blue-400">developer</span><span className="text-white">.</span><span className="text-blue-400">skills</span><span className="text-white">.</span><span className="text-yellow-300">map</span><span className="text-white">{`(skill => magic(skill));`}</span>
-                  </div>
-                  <div>
-                    <span className="text-white">{`}`}</span>
+                <div className="p-3 md:p-4 font-mono text-xs md:text-sm overflow-x-auto">
+                  <div className="min-w-max">
+                    <div className="mt-2">
+                      <span className="text-purple-400">const</span> <span className="text-blue-400">developer</span> <span className="text-white">=</span> <span className="text-yellow-300">{`{`}</span>
+                    </div>
+                    <div className="ml-2 md:ml-4">
+                      <span className="text-green-400">name</span><span className="text-white">:</span> <span className="text-orange-300">'Mehmet Maşa'</span><span className="text-white">,</span>
+                    </div>
+                    <div className="ml-2 md:ml-4">
+                      <span className="text-green-400">title</span><span className="text-white">:</span> <span className="text-orange-300">'Full Stack Web Developer'</span><span className="text-white">,</span>
+                    </div>
+                    <div className="ml-2 md:ml-4">
+                      <span className="text-green-400">skills</span><span className="text-white">:</span> <span className="text-yellow-300">[</span>
+                    </div>
+                    <div className="ml-4 md:ml-8">
+                      <span className="text-orange-300">'PHP'</span><span className="text-white">,</span>
+                    </div>
+                    <div className="ml-4 md:ml-8">
+                      <span className="text-orange-300">'NodeJS'</span><span className="text-white">,</span>
+                    </div>
+                    <div className="ml-4 md:ml-8">
+                      <span className="text-orange-300">'ReactJS'</span><span className="text-white">,</span>
+                    </div>
+                    <div className="ml-4 md:ml-8">
+                      <span className="text-orange-300">'SQL'</span><span className="text-white">,</span>
+                    </div>
+                    <div className="ml-4 md:ml-8">
+                      <span className="text-orange-300">'Tailwind CSS'</span>
+                    </div>
+                    <div className="ml-2 md:ml-4">
+                      <span className="text-yellow-300">]</span><span className="text-white">,</span>
+                    </div>
+                    <div className="ml-2 md:ml-4">
+                      <span className="text-green-400">contact</span><span className="text-white">:</span> <span className="text-orange-300">'mehmetmasa@icloud.com'</span>
+                    </div>
+                    <div>
+                      <span className="text-yellow-300">{`}`}</span><span className="text-white">;</span>
+                    </div>
+                    <div className="mt-4">
+                      <span className="text-purple-400">function</span> <span className="text-blue-400">createAmazingWebsites</span><span className="text-white">() {`{`}</span>
+                    </div>
+                    <div className="ml-2 md:ml-4">
+                      <span className="text-purple-400">return</span> <span className="text-blue-400">developer</span><span className="text-white">.</span><span className="text-blue-400">skills</span><span className="text-white">.</span><span className="text-yellow-300">map</span><span className="text-white">{`(skill => magic(skill));`}</span>
+                    </div>
+                    <div>
+                      <span className="text-white">{`}`}</span>
+                    </div>
                   </div>
                 </div>
               </div>
 
               {/* Floating technology badges */}
               <motion.div
-                className="absolute top-10 -left-6 bg-gray-800/90 backdrop-blur-sm px-4 py-2 rounded-lg border border-gray-700 shadow-lg"
+                className="absolute top-4 md:top-10 -left-3 md:-left-6 bg-gray-800/90 backdrop-blur-sm px-2 md:px-4 py-1 md:py-2 rounded-lg border border-gray-700 shadow-lg"
                 animate={{
                   y: [0, -10, 0],
                 }}
@@ -288,14 +290,14 @@ function HeroSection() {
                   ease: "easeInOut"
                 }}
               >
-                <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse"></div>
-                  <span className="text-white font-medium">React.js</span>
+                <div className="flex items-center gap-1 md:gap-2">
+                  <div className="w-2 md:w-3 h-2 md:h-3 bg-blue-500 rounded-full animate-pulse"></div>
+                  <span className="text-white font-medium text-xs md:text-sm">React.js</span>
                 </div>
               </motion.div>
 
               <motion.div
-                className="absolute bottom-20 -right-6 bg-gray-800/90 backdrop-blur-sm px-4 py-2 rounded-lg border border-gray-700 shadow-lg"
+                className="absolute bottom-10 md:bottom-20 -right-3 md:-right-6 bg-gray-800/90 backdrop-blur-sm px-2 md:px-4 py-1 md:py-2 rounded-lg border border-gray-700 shadow-lg"
                 animate={{
                   y: [0, 10, 0],
                 }}
@@ -306,9 +308,9 @@ function HeroSection() {
                   delay: 1
                 }}
               >
-                <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                  <span className="text-white font-medium">Tailwind CSS</span>
+                <div className="flex items-center gap-1 md:gap-2">
+                  <div className="w-2 md:w-3 h-2 md:h-3 bg-green-500 rounded-full animate-pulse"></div>
+                  <span className="text-white font-medium text-xs md:text-sm">Tailwind CSS</span>
                 </div>
               </motion.div>
             </div>

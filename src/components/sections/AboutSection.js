@@ -70,7 +70,7 @@ function AboutSection() {
   };
 
   return (
-    <section className="bg-gray-900 lg:py-20" id="about">
+    <section className="bg-gray-900 py-12 lg:py-20" id="about">
       <motion.div
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"
         initial="hidden"
